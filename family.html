@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Family Sleep Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Sleep Quality Analyzer</h1>
+    <h2>Name: Humayaun | CMS Number: 2957-2025</h2>
+    <h2>Name: Muhammad Roman| CMS Number: 3050-2025</h2>
+  </header>
+
+  <div class="container">
+    <h2>Family Portal</h2>
+    <p>Enter details for each family member to compare sleep quality.</p>
+
+    <form id="familyForm">
+      <label for="memberName">Member Name</label>
+      <input type="text" id="memberName" required>
+
+      <label for="duration">Sleep Duration (hours)</label>
+      <input type="number" id="duration" min="0" max="24" required>
+
+      <label for="wakeups">Night Wake-ups</label>
+      <input type="number" id="wakeups" min="0" max="10" required>
+
+      <label for="caffeine">Caffeine Intake</label>
+      <select id="caffeine">
+        <option value="0">None</option>
+        <option value="1">Low</option>
+        <option value="2">High</option>
+      </select>
+
+      <label for="screen">Screen Time Before Bed</label>
+      <select id="screen">
+        <option value="0">Less than 30 minutes</option>
+        <option value="1">30–60 minutes</option>
+        <option value="2">More than 1 hour</option>
+      </select>
+
+      <button type="submit">Add Member Report</button>
+    </form>
+
+    <div id="familyResults" class="tile-stack"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

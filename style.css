@@ -1,0 +1,271 @@
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ===== Header ===== */
+.site-header {
+  text-align: center;
+  background: #1e3c72;
+  color: #ffffff;
+  padding: 24px 16px;
+  border-bottom: 4px solid #f50909;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.site-header h2 {
+  margin: 8px 0 0;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+/* ===== Container ===== */
+.container {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 900px;
+  margin: 32px auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e6ebf2;
+}
+
+.container h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  color: #1e3c72;
+  font-weight: 700;
+}
+
+.container p {
+  margin: 0 0 18px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* ===== Section title ===== */
+.section-title {
+  text-align: center;
+  margin: 0 0 18px;
+  font-size: 18px;
+  color: #1e3c72;
+  font-weight: 600;
+}
+
+/* ===== Portal grid (index) ===== */
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  justify-items: center;
+  align-items: stretch;
+  margin-top: 24px;
+}
+
+.portal-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 260px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  overflow: hidden;
+}
+
+.portal-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.portal-card h3 {
+  margin: 12px 14px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e3c72;
+}
+
+.portal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+  border-color: #cfd7e3;
+}
+
+/* ===== Forms ===== */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 18px;
+  margin-top: 8px;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  color: #334;
+  margin-bottom: 6px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cfd7e3;
+  background: #fff;
+  font-size: 14px;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+  outline: none;
+  border-color: #2a5298;
+  box-shadow: 0 0 0 3px rgba(42,82,152,0.12);
+}
+
+form button[type="submit"] {
+  grid-column: 1 / -1;
+  padding: 12px 14px;
+  background: #1e3c72;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s ease, box-shadow 0.18s ease;
+}
+
+form button[type="submit"]:hover {
+  background: #2a5298;
+  box-shadow: 0 6px 16px rgba(30,60,114,0.25);
+}
+
+/* ===== Tiles (reports inside portals) ===== */
+.tile-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.tile {
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.tile h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e3c72;
+}
+
+.tile p {
+  margin: 4px 0 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.tile ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* ===== Info box (generic output) ===== */
+.info {
+  margin-top: 18px;
+  background: #f7f9fc;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  border: 1px solid #e6ebf2;
+  color: #3a3f45;
+}
+
+/* ===== Chart (reports page) ===== */
+canvas#sleepChart {
+  width: 100% !important;
+  max-width: 860px;
+  height: 360px !important;
+  margin-top: 18px;
+  background: #fff;
+  border: 1px solid #e6ebf2;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+/* ===== Utility spacing ===== */
+.mt-0 { margin-top: 0 !important; }
+.mt-8 { margin-top: 8px !important; }
+.mt-12 { margin-top: 12px !important; }
+.mt-16 { margin-top: 16px !important; }
+.mt-24 { margin-top: 24px !important; }
+
+/* ===== Responsive ===== */
+@media (max-width: 980px) {
+  .container {
+    margin: 24px 16px;
+    padding: 22px;
+  }
+
+  .portal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-card {
+    max-width: 100%;
+  }
+
+  .site-header h1 {
+    font-size: 24px;
+  }
+
+  .site-header h2 {
+    font-size: 14px;
+  }
+}

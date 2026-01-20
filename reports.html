@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reports Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Load Chart.js BEFORE your script -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Sleep Quality Analyzer</h1>
+   <h2>Name: Humayaun | CMS Number: 2957-2025</h2>
+    <h2>Name: Muhammad Roman| CMS Number: 3050-2025</h2>
+  </header>
+
+  <div class="container">
+    <h2>Reports Portal</h2>
+    <p>View all saved sleep scores as a chart.</p>
+
+    <!-- Chart -->
+    <canvas id="sleepChart" width="800" height="400"></canvas>
+
+    <!-- Clear Records button -->
+    <button id="clearBtn">Clear All Records</button>
+  </div>
+
+  <!-- Your app logic -->
+  <script src="script.js"></script>
+</body>
+</html>

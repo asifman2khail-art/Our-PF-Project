@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Individual Sleep Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Sleep Quality Analyzer</h1>
+     <h2>Name: Humayaun | CMS Number: 2957-2025</h2>
+    <h2>Name: Muhammad Roman| CMS Number: 3050-2025</h2>
+  </header>
+
+  <div class="container">
+    <h2>Individual Portal</h2>
+    <p>Analyze your personal sleep quality with instant scoring.</p>
+
+    <form id="sleepForm">
+      <label for="duration">Sleep Duration (hours)</label>
+      <input type="number" id="duration" min="0" max="24" />
+
+      <label for="wakeups">Night Wake-ups</label>
+      <input type="number" id="wakeups" min="0" max="10" />
+
+      <label for="caffeine">Caffeine Intake</label>
+      <select id="caffeine">
+        <option value="0">None</option>
+        <option value="1">Low</option>
+        <option value="2">High</option>
+      </select>
+
+      <label for="screen">Screen Time Before Bed</label>
+      <select id="screen">
+        <option value="0">Less than 30 minutes</option>
+        <option value="1">30–60 minutes</option>
+        <option value="2">More than 1 hour</option>
+      </select>
+    </form>
+
+    <div id="result" class="tile"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
